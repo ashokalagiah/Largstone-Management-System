@@ -1,0 +1,71 @@
+[
+    {
+        "title": "Dashboard",
+        "icons": "dashboard",
+        "child": false,
+        "path": "/Dashboard"
+    },
+    {
+        "title": "Master",
+        "icons": "engineering",
+        "path": false,
+        "child": [
+            {
+                "title": "User",
+                "icons": "person",
+                "child": false,
+                "path": "/user"
+            },
+            {
+                "title": "Employee",
+                "icons": "notes",
+                "path": "/EmployeeDetails"
+            },
+            {
+                "title": "Role",
+                "icons": "notes",
+                "path": "/Attendane"
+            }
+        ],
+        "arrow": "expand_more",
+        "arrowright": "keyboard_arrow_right"
+    },
+    {
+        "title": "Employee Details",
+        "icons": "account_balance",
+        "path": false,
+        "child": [
+            {
+                "title": "Employee Attedance",
+                "path": "/Employee Attedance"
+            },
+            {
+                "title": "Task",
+                "path": "/Task"
+            }
+        ],
+        "arrow": "expand_more",
+        "arrowright": "keyboard_arrow_right"
+    },
+    {
+        "title": "Report",
+        "icons": "report",
+        "path": false,
+        "child": [
+            {
+                "title": "Employee Report",
+                "path": "/Employee_Report"
+            },
+            {
+                "title": "Task Report",
+                "path": "/Task_Report"
+            },
+            {
+                "title": "User Report",
+                "path": "/User_Report"
+            }
+        ],
+        "arrow": "expand_more",
+        "arrowright": "keyboard_arrow_right"
+    }
+]
