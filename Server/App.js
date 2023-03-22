@@ -18,8 +18,8 @@ db.connect(function (err, result) {
     }
 });
 
-const { RegistrationRouter } = require("../Server/Routes/commonRoute");
-app.use('/', RegistrationRouter);
+const { RegistrationRouter, InvoiceRouter } = require("../Server/Routes/commonRoute");
+app.use('/', RegistrationRouter, InvoiceRouter);
 
 const PORT = 8080;
 app.listen(PORT, () => {

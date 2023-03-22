@@ -30,7 +30,7 @@ Registration.prototype.RegistrationModule = function (req, cbk) {
 
 
 Registration.prototype.listall = function (req, cbk) {
-  let query = "SELECT * FROM registration_list";
+  let query = "SELECT * FROM registration_table";
   commonfunc.listall(query, function (err, result) {
     if (err) {
       cbk(err, err);
@@ -41,7 +41,7 @@ Registration.prototype.listall = function (req, cbk) {
 };
 
 Registration.prototype.create = function (req, cbk) {
-  var query = `INSERT INTO registration_list SET ?`;
+  var query = `INSERT INTO registration_table SET ?`;
   commonfunc.create(query, req.body, function (err, result) {
     if (err) {
       cbk(err, err);
@@ -51,21 +51,21 @@ Registration.prototype.create = function (req, cbk) {
   });
 };
 
-Registration.prototype.update = function (req, cbk) {
-  let id = req.body.RegID;
-  let query = `UPDATE registration_list SET ? WHERE RegID=?`;
-  commonfunc.update(query, [req.body, id], function (err, result) {
-    if (err) {
-      cbk(err, err);
-    } else {
-      cbk(false, result);
-    }
-  });
-};
+// Registration.prototype.update = function (req, cbk) {
+//   let id = req.body.RegID;
+//   let query = `UPDATE registration_table SET ? WHERE RegID=?`;
+//   commonfunc.update(query, [req.body, id], function (err, result) {
+//     if (err) {
+//       cbk(err, err);
+//     } else {
+//       cbk(false, result);
+//     }
+//   });
+// };
 
 Registration.prototype.delete = function (req, cbk) {
   let id = req.body.RegID;
-  let query = `DELETE FROM registration_list WHERE RegID=?`;
+  let query = `DELETE FROM registration_table WHERE RegID=?`;
   commonfunc.delete(query, id, function (err, result) {
     if (err) {
       cbk(err, err);
@@ -75,16 +75,16 @@ Registration.prototype.delete = function (req, cbk) {
   });
 };
 
-Registration.prototype.listbyid = function (req, cbk) {
-    let id = req.body.RegID;
-    let query = `SELECT * FROM registration_list WHERE RegID=?`;
-    commonfunc.listByID(query, id, function (err, result) {
-        if (err) {
-            cbk(err, err);
-        } else {
-            cbk(false, result);
-        }
-    });
-};
+// Registration.prototype.listbyid = function (req, cbk) {
+//     let id = req.body.RegID;
+//     let query = `SELECT * FROM registration_table WHERE RegID=?`;
+//     commonfunc.listByID(query, id, function (err, result) {
+//         if (err) {
+//             cbk(err, err);
+//         } else {
+//             cbk(false, result);
+//         }
+//     });
+// };
 
 module.exports = Registration;

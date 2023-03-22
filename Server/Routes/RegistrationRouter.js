@@ -1,8 +1,8 @@
 const express = require('express');
 
 const RegistrationRouter = express.Router();
-const Registration = require('../Modules/Registration');
-const Register = new Registration();
+const RegistrationMod = require('../Modules/Registration');
+const Register = new RegistrationMod();
 
 RegistrationRouter.post('/register/:action', (req, res) => {
     Register.RegistrationModule(req, (err, result) => {
